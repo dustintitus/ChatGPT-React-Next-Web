@@ -34,7 +34,7 @@ const PurposeData: { [key in SystemPurpose]: { systemMessage: string; descriptio
     description: 'Helps you write business emails',
   },
   Generic: {
-    systemMessage: 'You are a digital strategist, using OpenAI language models you are creating the best strategy on planet earth, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
+    systemMessage: 'A digital strategist, using OpenAI language models you are creating the best strategy on planet earth, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
     description: 'Helps you create awesome strategies',
   },
   Scientist: {
