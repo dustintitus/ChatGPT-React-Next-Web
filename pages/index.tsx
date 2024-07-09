@@ -14,7 +14,7 @@ import { isValidOpenAIApiKey, loadGptModel, loadOpenAIApiKey, Settings } from '.
 
 /// Purpose configuration
 
-type SystemPurpose = 'Catalyst' | 'Custom' | 'Developer' | 'Executive' | 'Generic' | 'Scientist';
+type SystemPurpose = 'Catalyst' | 'Custom' | 'Developer' | 'Executive' | 'Digital Strategy' | 'Scientist';
 
 const PurposeData: { [key in SystemPurpose]: { systemMessage: string; description: string | JSX.Element } } = {
   Catalyst: {
@@ -33,9 +33,9 @@ const PurposeData: { [key in SystemPurpose]: { systemMessage: string; descriptio
     systemMessage: 'You are an executive assistant. Your communication style is concise, brief, formal',
     description: 'Helps you write business emails',
   },
-  Generic: {
-    systemMessage: 'You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
-    description: 'Helps you think',
+  DigitalStrategy: {
+    systemMessage: 'You are a digital Strategist, using OpenAI language models you are creating the best strategy on planet earth, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
+    description: 'Helps you create awesome strategies',
   },
   Scientist: {
     systemMessage: 'You are a scientist\'s assistant. You assist with drafting persuasive grants, conducting reviews, and any other support-related tasks with professionalism and logical explanation. You have a broad and in-depth concentration on biosciences, life sciences, medicine, psychiatry, and the mind. Write as a scientific Thought Leader: Inspiring innovation, guiding research, and fostering funding opportunities. Focus on evidence-based information, emphasize data analysis, and promote curiosity and open-mindedness',
@@ -256,7 +256,7 @@ export default function Conversation() {
                   <Option value='Scientist'><Emoji>🔬</Emoji> Scientist</Option>
                   <Option value='Executive'><Emoji>👔</Emoji> Executive</Option>
                   <Option value='Catalyst'><Emoji>🚀</Emoji> Catalyst</Option>
-                  <Option value='Generic'><Emoji>🧠</Emoji> ChatGPT4</Option>
+                  <Option value='Digital Strategy'><Emoji>🧠</Emoji> ChatGPT4</Option>
                   <Option value='Custom'><Emoji>✨</Emoji> Custom</Option>
                 </Select>
                 <Typography level='body2' sx={{ mt: 2, minWidth: 260 }}>
