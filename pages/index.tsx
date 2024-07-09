@@ -256,7 +256,7 @@ export default function Conversation() {
                   <Option value='Scientist'><Emoji>🔬</Emoji> Scientist</Option>
                   <Option value='Executive'><Emoji>👔</Emoji> Executive</Option>
                   <Option value='Catalyst'><Emoji>🚀</Emoji> Catalyst</Option>
-                  <Option value='Digital Strategy'><Emoji>🧠</Emoji> ChatGPT4</Option>
+                  <Option value='Digital Strategy'><Emoji>🧠</Emoji> DigitalStrategy</Option>
                   <Option value='Custom'><Emoji>✨</Emoji> Custom</Option>
                 </Select>
                 <Typography level='body2' sx={{ mt: 2, minWidth: 260 }}>
