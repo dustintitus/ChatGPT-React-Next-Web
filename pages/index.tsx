@@ -14,7 +14,7 @@ import { isValidOpenAIApiKey, loadGptModel, loadOpenAIApiKey, Settings } from '.
 
 /// Purpose configuration
 
-type SystemPurpose = 'Catalyst' | 'Custom' | 'Developer' | 'Executive' | 'DigitalStrategy' | 'Scientist';
+type SystemPurpose = 'Catalyst' | 'Custom' | 'Developer' | 'Executive' | 'Digital' | 'Scientist';
 
 const PurposeData: { [key in SystemPurpose]: { systemMessage: string; description: string | JSX.Element } } = {
   Catalyst: {
@@ -33,8 +33,8 @@ const PurposeData: { [key in SystemPurpose]: { systemMessage: string; descriptio
     systemMessage: 'You are an executive assistant. Your communication style is concise, brief, formal',
     description: 'Helps you write business emails',
   },
-  DigitalStrategy: {
-    systemMessage: 'You are a digital Strategist, using OpenAI language models you are creating the best strategy on planet earth, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
+  Digital: {
+    systemMessage: 'You are a digital strategist, using OpenAI language models you are creating the best strategy on planet earth, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
     description: 'Helps you create awesome strategies',
   },
   Scientist: {
@@ -256,7 +256,7 @@ export default function Conversation() {
                   <Option value='Scientist'><Emoji>🔬</Emoji> Scientist</Option>
                   <Option value='Executive'><Emoji>👔</Emoji> Executive</Option>
                   <Option value='Catalyst'><Emoji>🚀</Emoji> Catalyst</Option>
-                  <Option value='Digital Strategy'><Emoji>🧠</Emoji> DigitalStrategy</Option>
+                  <Option value='Digital'><Emoji>🧠</Emoji> Digital</Option>
                   <Option value='Custom'><Emoji>✨</Emoji> Custom</Option>
                 </Select>
                 <Typography level='body2' sx={{ mt: 2, minWidth: 260 }}>
