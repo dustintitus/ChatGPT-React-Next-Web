@@ -86,7 +86,7 @@ export function Settings({ open, onClose }: { open: boolean, onClose: () => void
             value={gptModel}
             onChange={handleGptModelChange}
           >
-            <Option value={'gpt-4'}>GPT-4</Option>
+            <Option value={'gpt-4'}>GPT-4-D</Option>
             <Option value={'gpt-3.5-turbo'}>GPT-3.5 Turbo</Option>
           </Select>
 
