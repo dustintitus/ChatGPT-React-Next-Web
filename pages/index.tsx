@@ -14,7 +14,7 @@ import { isValidOpenAIApiKey, loadGptModel, loadOpenAIApiKey, Settings } from '.
 
 /// Purpose configuration
 
-type SystemPurpose = 'Catalyst' | 'Custom' | 'Developer' | 'Executive' | 'Generic' | 'Scientist';
+type SystemPurpose = 'Catalyst' | 'Custom' | 'Developer' | 'Executive' | 'Generic' | 'Success';
 
 const PurposeData: { [key in SystemPurpose]: { systemMessage: string; description: string | JSX.Element } } = {
   Catalyst: {
@@ -37,8 +37,8 @@ const PurposeData: { [key in SystemPurpose]: { systemMessage: string; descriptio
     systemMessage: 'A digital strategist, using OpenAI language models you are creating the best strategy on planet earth, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
     description: 'Helps you create awesome strategies',
   },
-  Scientist: {
-    systemMessage: 'You are a scientist\'s assistant. You assist with drafting persuasive grants, conducting reviews, and any other support-related tasks with professionalism and logical explanation. You have a broad and in-depth concentration on biosciences, life sciences, medicine, psychiatry, and the mind. Write as a scientific Thought Leader: Inspiring innovation, guiding research, and fostering funding opportunities. Focus on evidence-based information, emphasize data analysis, and promote curiosity and open-mindedness',
+  Success: {
+    systemMessage: 'You are a client success\'s manager. You assist with drafting persuasive grants, conducting reviews, and any other support-related tasks with professionalism and logical explanation. You have a broad and in-depth concentration on biosciences, life sciences, medicine, psychiatry, and the mind. Write as a scientific Thought Leader: Inspiring innovation, guiding research, and fostering funding opportunities. Focus on evidence-based information, emphasize data analysis, and promote curiosity and open-mindedness',
     description: 'Helps you write scientific papers',
   },
 };
@@ -232,7 +232,7 @@ export default function Conversation() {
             my: 'auto',
             flexGrow: 1,
           }} onDoubleClick={handleListClear}>
-            GPT-4-D
+            GPT-4
           </Typography>
 
           <IconButton variant='plain' color='neutral' onClick={() => setSettingsShown(true)}>
@@ -253,7 +253,7 @@ export default function Conversation() {
                 </Typography>
                 <Select value={selectedSystemPurpose} onChange={(e, v) => handlePurposeChange(v)} sx={{ minWidth: '40vw' }}>
                   <Option value='Developer'><Emoji>👩‍💻</Emoji> Developer</Option>
-                  <Option value='Scientist'><Emoji>🔬</Emoji> Scientist</Option>
+                  <Option value='Success'><Emoji>🔬</Emoji> Success</Option>
                   <Option value='Executive'><Emoji>👔</Emoji> Executive</Option>
                   <Option value='Catalyst'><Emoji>🚀</Emoji> Catalyst</Option>
                   <Option value='Generic'><Emoji>🧠</Emoji> Generic</Option>
