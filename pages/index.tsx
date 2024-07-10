@@ -232,7 +232,7 @@ export default function Conversation() {
             my: 'auto',
             flexGrow: 1,
           }} onDoubleClick={handleListClear}>
-            GPT-4
+            GPT-4-D
           </Typography>
 
           <IconButton variant='plain' color='neutral' onClick={() => setSettingsShown(true)}>
