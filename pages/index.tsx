@@ -249,7 +249,7 @@ export default function Conversation() {
             <Stack direction='column' sx={{ alignItems: 'center', justifyContent: 'center', minHeight: '50vh' }}>
               <Box>
                 <Typography level='body3' color='neutral'>
-                  AI purpose
+                Job Function
                 </Typography>
                 <Select value={selectedSystemPurpose} onChange={(e, v) => handlePurposeChange(v)} sx={{ minWidth: '40vw' }}>
                   <Option value='Developer'><Emoji>👩‍💻</Emoji> Developer</Option>
