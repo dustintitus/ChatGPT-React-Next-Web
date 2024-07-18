@@ -14,32 +14,32 @@ import { isValidOpenAIApiKey, loadGptModel, loadOpenAIApiKey, Settings } from '.
 
 /// Purpose configuration
 
-type SystemPurpose = 'Catalyst' | 'Custom' | 'Developer' | 'Executive' | 'Generic' | 'Success';
+type SystemPurpose = 'Editor' | 'Custom' | 'Developer' | 'Executive' | 'Generic' | 'Success';
 
 const PurposeData: { [key in SystemPurpose]: { systemMessage: string; description: string | JSX.Element } } = {
-  Catalyst: {
-    systemMessage: 'You are a marketing extraordinaire for a booming startup fusing creativity, data-smarts, and digital prowess to skyrocket growth & wow audiences. So fun. Much meme. 🚀🎯💡',
-    description: 'The growth hacker with marketing superpowers 🚀',
+  Editor: {
+    systemMessage: 'You are a editor extraordinaire for ZoomerMedia, writing, and digital prowess to skyrocket growth & wow audiences. You are working on blogto.com, dailyhive.com, curiocity.com, readthepeak.com and mobilesyrup.com. All reference for this role needs to come from these websites and its current content set',
+    description: 'The content creator power house 🚀',
   },
-  Custom: {
-    systemMessage: 'You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
-    description: 'User-defined purpose',
-  },
+///  Custom: {
+///    systemMessage: 'You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
+///    description: 'User-defined purpose',
+///  },
   Developer: {
     systemMessage: 'You are a sophisticated, accurate, and modern AI programming assistant',
     description: <>Helps you code</>,
   },
   Executive: {
-    systemMessage: 'You are an executive assistant. Your communication style is concise, brief, formal',
-    description: 'Helps you write business emails',
+    systemMessage: 'You are an executive. Your communication style is concise, brief, formal.',
+    description: 'You are in leadership at ZoomerMedia',
   },
   Generic: {
     systemMessage: 'A digital strategist, using OpenAI language models you are creating the best strategy on planet earth, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
     description: 'Helps you create awesome strategies',
   },
   Success: {
-    systemMessage: 'You are a client success\'s manager. You assist with drafting persuasive grants, conducting reviews, and any other support-related tasks with professionalism and logical explanation. You have a broad and in-depth concentration on biosciences, life sciences, medicine, psychiatry, and the mind. Write as a scientific Thought Leader: Inspiring innovation, guiding research, and fostering funding opportunities. Focus on evidence-based information, emphasize data analysis, and promote curiosity and open-mindedness',
-    description: 'Helps you write scientific papers',
+    systemMessage: 'You are a client success\'s manager. You assist with drafting persuasive rfps, grants, conducting reviews, and any other support-related tasks with professionalism and logical explanation. You have a broad and in-depth concentration on media, advertising and strategy. Write as a scientific Thought Leader: Inspiring innovation, guiding research, and fostering media opportunities. Focus on evidence-based information, emphasize data analysis, and promote curiosity and open-mindedness',
+    description: 'Helps you help advertisers succeed',
   },
 };
 
@@ -255,9 +255,9 @@ export default function Conversation() {
                   <Option value='Developer'><Emoji>👩‍💻</Emoji> Developer</Option>
                   <Option value='Success'><Emoji>🔬</Emoji> Success</Option>
                   <Option value='Executive'><Emoji>👔</Emoji> Executive</Option>
-                  <Option value='Catalyst'><Emoji>🚀</Emoji> Catalyst</Option>
-                  <Option value='Generic'><Emoji>🧠</Emoji> Generic</Option>
-                  <Option value='Custom'><Emoji>✨</Emoji> Custom</Option>
+                  ///<Option value='Editor'><Emoji>🚀</Emoji> Editor</Option>
+                  ///<Option value='Generic'><Emoji>🧠</Emoji> Generic</Option>
+                  ///<Option value='Custom'><Emoji>✨</Emoji> Custom</Option>
                 </Select>
                 <Typography level='body2' sx={{ mt: 2, minWidth: 260 }}>
                   {PurposeData[selectedSystemPurpose].description}
