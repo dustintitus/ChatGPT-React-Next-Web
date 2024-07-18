@@ -255,9 +255,9 @@ export default function Conversation() {
                   <Option value='Developer'><Emoji>👩‍💻</Emoji> Developer</Option>
                   <Option value='Success'><Emoji>🔬</Emoji> Success</Option>
                   <Option value='Executive'><Emoji>👔</Emoji> Executive</Option>
-                  <Option value='Editor'><Emoji>🚀</Emoji> Editor</Option>
-                  ///<Option value='Generic'><Emoji>🧠</Emoji> Generic</Option>
-                  ///<Option value='Custom'><Emoji>✨</Emoji> Custom</Option>
+                  {/*<Option value='Editor'><Emoji>🚀</Emoji> Editor</Option>*/}
+                  {/*<Option value='Generic'><Emoji>🧠</Emoji> Generic</Option>*/}
+                  {/*<Option value='Custom'><Emoji>✨</Emoji> Custom</Option>*/}
                 </Select>
                 <Typography level='body2' sx={{ mt: 2, minWidth: 260 }}>
                   {PurposeData[selectedSystemPurpose].description}
