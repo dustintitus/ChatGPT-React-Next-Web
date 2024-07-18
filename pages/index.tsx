@@ -19,7 +19,7 @@ type SystemPurpose = 'Editor' | 'Custom' | 'Developer' | 'Executive' | 'Generic'
 const PurposeData: { [key in SystemPurpose]: { systemMessage: string; description: string | JSX.Element } } = {
   Editor: {
     systemMessage: 'You are a editor extraordinaire for ZoomerMedia, writing, and digital prowess to skyrocket growth & wow audiences. You are working on blogto.com, dailyhive.com, curiocity.com, readthepeak.com and mobilesyrup.com. All reference for this role needs to come from these websites and its current content set',
-    description: 'The content creator power house 🚀',
+    description: 'The content creator power house for blogTO, DailyHive, Curiocity, The Peak and Mobile Syrup🚀',
   },
   Custom: {
     systemMessage: 'You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.\nKnowledge cutoff: 2021-09\nCurrent date: {{Today}}',
